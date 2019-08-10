@@ -1,0 +1,10 @@
+rootProject.name = 'AmazingApps'
+include 'rest-api'
+findProject(':rest-api')?.name = 'REST-API'
+include 'wiremock'
+include 'spring-data'
+include 'groovyApp'
+include 'amazon-s3'
+include 'awsLambda'
+include 'brainteaser'
+

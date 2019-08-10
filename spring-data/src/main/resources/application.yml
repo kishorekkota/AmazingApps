@@ -1,0 +1,26 @@
+
+
+
+spring:
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+
+
+
+---
+spring:
+  profiles: amazon
+  datasource:
+    url: jdbc:mysql://amazingapps.cfphv9xnlk3a.us-east-2.rds.amazonaws.com:3306/amazingapps
+    username: databaseadmin
+    password: aWC-Q4D-zaD-wD6
+
+---
+spring:
+  profiles: local
+  datasource:
+      url: jdbc:mysql://localhost:3306/mysql
+      username: root
+      password: my-secret-pw

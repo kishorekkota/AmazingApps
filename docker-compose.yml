@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  database:
+    image: mariadb
+    ports:
+      - "3306:3306"
+    environment:
+      - "MYSQL_DATABASE: amazingapps"
+      - "MYSQL_ROOT_PASSWORD=my-secret-pw"
+
+    container_name: amazingapps
+

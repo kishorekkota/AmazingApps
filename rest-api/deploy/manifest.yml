@@ -1,0 +1,5 @@
+---
+applications:
+- name: rest-api
+  path: REST-API-1.0-SNAPSHOT.jar
+  buildpack: java_buildpack

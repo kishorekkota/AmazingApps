@@ -1,0 +1,12 @@
+# Compiled files
+*.tfstate
+*.tfstate.backup
+
+# Module directory
+.terraform/
+
+.gradle/
+.idea/
+*.class
+build/
+*/build/*

@@ -11,9 +11,9 @@ import java.io.*;
 
 /*
         Access Key ID:
-        aws_access_key_id = AKIAJCQQZKVUARAOWPVQ
+        aws_access_key_id = XX
         Secret Access Key:
-        aws_secret_access_key = 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
+        aws_secret_access_key = XX
 */
 
 public class CreateS3Bucket {

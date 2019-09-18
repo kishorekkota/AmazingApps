@@ -4,6 +4,7 @@
 
 # Module directory
 .terraform/
+**/*/variable.tf/*
 
 .gradle/
 .idea/

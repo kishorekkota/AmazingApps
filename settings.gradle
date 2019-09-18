@@ -7,4 +7,5 @@ include 'groovyApp'
 include 'amazon-s3'
 include 'awsLambda'
 include 'brainteaser'
+include 'aws-dynamodb'
 

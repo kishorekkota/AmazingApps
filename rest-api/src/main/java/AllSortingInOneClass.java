@@ -119,6 +119,17 @@ public class AllSortingInOneClass {
     }
 
 
+
+
+    public static void sortit()
+    {
+        int[] array = {5,4,3,2,1};
+        System.out.println("Before sorting    : " + Arrays.toString(array));
+        bubblesort(array);
+        selectionsort(array);
+        mergesort(array);        
+    }
+
     public static void main(String[] args) {
 
         int[] array = new int[]{5454,222,10,12,343,23,545,5753,232,457,676};

@@ -18,7 +18,9 @@ public class MyFirstRestController
     @PostMapping("/testpost")
     public Ouput testendpoint(@RequestBody Input input)
     {
-
+        
+        System.out.println(input);
+        
         Ouput test = new Ouput();
 
         return test;

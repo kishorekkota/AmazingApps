@@ -1,9 +1,12 @@
 package com.amazon;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Fibonocci {
 
 
-    int[] fibs = new int[20000];
+    Map<Integer,Integer> fibs = new HashMap<>();
 
 
     public int fibonocci(int number)
@@ -11,15 +14,21 @@ public class Fibonocci {
 
         if (number == 1)
             return 1;
+        if (number == 2)
+            return 1;
 
-        if (fibs[number] > 0)
-            return fibs[number];
+        Integer fib = fibs.get(number);
+
+        if (fib != null)
+            return fib;
         else{
-            fibs[number] = fibonocci(number -1) + fibonocci(number-2);
-        }
+             fib = fibonocci(number -1) + fibonocci(number-2);
+
+             fibs.put(number,fib);
+            }
 
 
-        return fibs[number];
+        return fib;
 
     }
 
@@ -27,7 +36,7 @@ public class Fibonocci {
     public static void main(String[] args){
         Fibonocci fbs = new Fibonocci();
 
-        int number = fbs.fibonocci(4);
+        int number = fbs.fibonocci(400);
 
         System.out.println(number);
     }

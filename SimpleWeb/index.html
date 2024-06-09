@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Web Index Page - SSE Client</title>
+</head>
+
+<body>
+Hello
+<div id="sseData"></div>
+
+<script>
+    const sseDataElement = document.getElementById('sseData');
+
+    const eventSource = new EventSource('http://localhost:8080/test');
+
+    console.log(eventSource);
+
+    eventSource.onmessage = function(eventsource,event) {
+        console.log("EventSource message: " + event.data);
+        sseDataElement.innerHTML += event.data + '<br>';
+    };
+
+
+    //     = function(event) {
+    //     console.log("EventSource message: " + event.data);
+    //     sseDataElement.innerHTML += event.data + '<br>';
+    // };
+
+    eventSource.onerror = function(error) {
+        console.error('EventSource failed:', error);
+        eventSource.close();
+    };
+
+    eventSource.onopen = function(event) {
+        console.log('EventSource opened ' + eventSource.url);
+    };
+
+    console.log('EventSource created ' + eventSource.url);
+
+
+</script>
+</body>
+</html>
